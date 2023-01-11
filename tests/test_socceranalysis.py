@@ -1,0 +1,1 @@
+from socceranalysis import socceranalysis
