@@ -1,8 +1,15 @@
-# Contributing
+# Welcome to the Soccer anaylsis!
 
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.
 
+## New contributor guide
+
+To get an overview of the project, read the [README](README). To contribute with our project, here are some resources to help you get started with open source contributions:
+
+- [Finding ways to contribute to open source on GitHub](https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github)
+- [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
+- [Contribute to a Project](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
 ## Types of Contributions
 
 ### Report Bugs
@@ -70,4 +77,4 @@ Before you submit a pull request, check that it meets these guidelines:
 ## Code of Conduct
 
 Please note that the `socceranalysis` project is released with a
-Code of Conduct. By contributing to this project you agree to abide by its terms.
+[Code of Conduct](https://github.com/UBC-MDS/socceranalysis_python/blob/main/CONDUCT.md). By contributing to this project you agree to abide by its terms.
