@@ -1,24 +1,29 @@
 # socceranalysis_python
 
-# Python package for outputing soccer statistics based on soccer dataset
-
-The socceranalysis_python package is built to contain functions which will quickly output a soccer statistics for a specified soccer dataset.
-
-The package contains 4 functions: one for getting the summary statistics of a particular team, one for getting outliers based on the market value of a player, one for ranking the players by goal per game and  the last one for displaying different plots. The following is providing detailed information for each of these functions mentioned above:
+socceranalysis_python is a powerful Python package designed to make it easy to analyze and understand soccer statistics. With its set of functions, you can quickly obtain summary statistics for a particular team, identify outliers based on market value, rank players by goals per game and display different plots. The package is built in a way that allows user to easily customize the functions to their own interests, giving them the flexibility to analyze the data in a way that is most meaningful to them. Whether you're a coach, a sports journalist or an analyst, socceranalysis_python will help you unlock the insights hidden in your soccer data and make more informed decisions.
 
 
-## Function 1: Summary statistics of a particular team 
+## Function 1: [Summary statistics of a particular team](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/find_team_stat.py) 
+* This function can provide a quick and easy way to understand the overall performance of a team and how it compares to other teams in the dataset. 
+## Function 2: [Ranking the players by goal per game](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/playerranking.py)
 
-## Function 2: Ranking the players by goal per game
+* This function provides an easy way to compare the performance of players and identify the most effective goal scorers in the data.
 
-## Function 3: Getting outliers based on the market value of a player
+## Function 3: [Getting outliers based on the market value of a player](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/outlier_identification.py)
+*  This function allows users to identify players with market values that are significantly different from the rest of the players in the dataset. It uses statistical methods to determine which players are considered outliers based on their market value, providing a quick and easy way to identify potential overvalued or undervalued players in the data.
 
-## Plots
+## Function 4: [Visual descriptive statistics based on user selection](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/viz_stats.py)
+* This function is a useful tool for quickly generating meaningful visualizations that can help users understand and interpret the data.
+
+
+Socceranalysis_python can be used in conjunction with other popular Python packages such as [pandas](https://github.com/pandas-dev/pandas) and [scikit-learn](https://github.com/scikit-learn/scikit-learn) to perform more advanced data analysis and machine learning tasks. For example, users can use pandas to manipulate and clean their soccer data, and then use this package to perform specific soccer-related analysis on the cleaned data. Additionally, socceranalysis_python can be used in conjunction with scikit-learn for machine learning tasks on soccer data. They are designed to be a higher-level, more user-friendly and declarative interface based on [Altair](https://github.com/altair-viz/altair) for performing specific soccer-related analysis and visualization tasks. Users can perform similar visualization using [matplotlib](https://github.com/matplotlib/matplotlib). Overall, socceranalysis is a valuable addition to the Python ecosystem as it provides a specialized tool for analyzing and understanding soccer data without the need for writing complex code, this can be especially useful for users who may not have extensive experience with data analysis or visualization.
+
+
 
 ## Installation
 
 ```bash
-$ pip install socceranalysis
+$ pip install socceranalysis_python
 ```
 
 ## Usage
@@ -33,8 +38,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`socceranalysis` was created by Group 15 . It is licensed under the terms of the MIT license.
+`socceranalysis_python` was created by Gaoxiang Wang, Manvir Kohli, Vincent Ho and Flora Wendy. It is licensed under the terms of the MIT license.
 
 ## Credits
 
-`socceranalysis` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`socceranalysis_python` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
