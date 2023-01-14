@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def remove_outliers(df,var, method = "IQR",thresh=3):
+def get_outliers(df,var, method = "IQR",thresh=3):
     """Returns outliers in the dataset based on values of a variable
 
     This function identifies outliers in the dataset based on either of the following methods:
@@ -31,5 +31,5 @@ def remove_outliers(df,var, method = "IQR",thresh=3):
 
     Examples
     --------
-    >>> remove_outliers("Wages","IQR",3)
+    >>> get_outliers("Wages","IQR",3)
     """
