@@ -3,7 +3,7 @@ import altair as alt
 from panel.interact import interact
 
 def viz_stats(x_col, y_col,df = dat):
-    """Create a scatter plot of two chosen numerical features with 
+    """Create a scatter plot of two chosen numerical features.
     
     Parameters
     ----------
@@ -33,7 +33,7 @@ def get_dashboard(cols = ['age', 'Appearances total', 'Wages_EUR', 'Goals_total'
     Parameters
     ----------
     cols : list
-        a list of column names used in the dropdown menus.
+        a list of column names used in both dropdown menus.
 
     Returns
     -------
