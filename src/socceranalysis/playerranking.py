@@ -1,3 +1,4 @@
+# Author: Flora Ouedraogo
 import pandas as pd 
 import numpy as np
 
