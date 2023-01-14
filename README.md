@@ -5,9 +5,9 @@ socceranalysis_python is a powerful Python package designed to make it easy to a
 
 ## Function 1: [Summary statistics of a particular team](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/find_team_stat.py) 
 * This function can provide a quick and easy way to understand the overall performance of a team and how it compares to other teams in the dataset. 
-## Function 2: [Ranking the players by goal per game](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/playerranking.py)
+## Function 2: [Ranking the players by attribute](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/playerranking.py)
 
-* This function provides an easy way to compare the performance of players and identify the most effective goal scorers in the data.
+* This function provides an easy way to compare the performance of players based on specific attributes.
 
 ## Function 3: [Getting outliers based on the market value of a player](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/outlier_identification.py)
 *  This function allows users to identify players with market values that are significantly different from the rest of the players in the dataset. It uses statistical methods to determine which players are considered outliers based on their market value, providing a quick and easy way to identify potential overvalued or undervalued players in the data.
