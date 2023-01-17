@@ -34,10 +34,62 @@ tests-no-zope = ["hypothesis", "pympler", "pytest (>=4.3.0)", "pytest-xdist", "c
 tests_no_zope = ["hypothesis", "pympler", "pytest (>=4.3.0)", "pytest-xdist", "cloudpickle", "mypy (>=0.971,<0.990)", "pytest-mypy-plugins"]
 
 [[package]]
+name = "bleach"
+version = "5.0.1"
+description = "An easy safelist-based HTML-sanitizing tool."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+six = ">=1.9.0"
+webencodings = "*"
+
+[package.extras]
+css = ["tinycss2 (>=1.1.0,<1.2)"]
+dev = ["build (==0.8.0)", "flake8 (==4.0.1)", "hashin (==0.17.0)", "pip-tools (==6.6.2)", "pytest (==7.1.2)", "Sphinx (==4.3.2)", "tox (==3.25.0)", "twine (==4.0.1)", "wheel (==0.37.1)", "black (==22.3.0)", "mypy (==0.961)"]
+
+[[package]]
+name = "bokeh"
+version = "2.4.3"
+description = "Interactive plots and applications in the browser from Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+Jinja2 = ">=2.9"
+numpy = ">=1.11.3"
+packaging = ">=16.8"
+pillow = ">=7.1.0"
+PyYAML = ">=3.10"
+tornado = ">=5.1"
+typing-extensions = ">=3.10.0"
+
+[[package]]
+name = "certifi"
+version = "2022.12.7"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "charset-normalizer"
+version = "2.0.12"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+category = "main"
+optional = false
+python-versions = ">=3.5.0"
+
+[package.extras]
+unicode_backport = ["unicodedata2"]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 
@@ -131,6 +183,30 @@ unicode = ["unicodedata2 (>=14.0.0)"]
 woff = ["zopfli (>=0.1.4)", "brotlicffi (>=0.8.0)", "brotli (>=1.0.1)"]
 
 [[package]]
+name = "idna"
+version = "3.4"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "importlib-metadata"
+version = "6.0.0"
+description = "Read metadata from Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+zipp = ">=0.5"
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+perf = ["ipython"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "pytest-flake8", "importlib-resources (>=1.3)"]
+
+[[package]]
 name = "iniconfig"
 version = "2.0.0"
 description = "brain-dead simple config-ini parsing"
@@ -175,6 +251,20 @@ description = "A fast implementation of the Cassowary constraint solver"
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "markdown"
+version = "3.4.1"
+description = "Python implementation of Markdown."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+importlib-metadata = {version = ">=4.4", markers = "python_version < \"3.10\""}
+
+[package.extras]
+testing = ["coverage", "pyyaml"]
 
 [[package]]
 name = "markupsafe"
@@ -252,6 +342,47 @@ pytz = ">=2020.1"
 test = ["hypothesis (>=5.5.3)", "pytest (>=6.0)", "pytest-xdist (>=1.31)"]
 
 [[package]]
+name = "panel"
+version = "0.14.2"
+description = "A high level app and dashboarding solution for Python."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+bleach = "*"
+bokeh = ">=2.4.0,<2.5.0"
+markdown = "*"
+param = ">=1.12.0"
+pyct = ">=0.4.4"
+pyviz-comms = ">=0.7.4"
+requests = "*"
+tqdm = ">=4.48.0"
+typing-extensions = "*"
+
+[package.extras]
+all = ["aiohttp", "altair", "channels", "croniter", "datashader", "diskcache", "django (<4)", "flake8", "flaky", "folium", "graphviz", "holoviews", "holoviews (>1.14.1)", "hvplot", "ipyleaflet", "ipympl", "ipython (>=7.0)", "ipyvolume", "ipyvuetify", "ipywidgets", "ipywidgets-bokeh", "jupyter-bokeh (>=3.0.2)", "jupyterlab", "lxml", "markdown-it-py", "matplotlib", "nbsite (>=0.7.2rc2)", "nbval", "networkx (>=2.5)", "pandas (>=1.3)", "parameterized", "pillow", "playwright", "plotly", "plotly (>=4.0)", "pre-commit", "pydata-sphinx-theme (<=0.9.0)", "pydeck", "pygraphviz", "pyinstrument (>=4.0)", "pytest", "pytest-cov", "pytest-playwright", "pytest-xdist", "python-graphviz", "pyvista (<0.33)", "reacton", "scikit-learn", "scipy", "seaborn", "sphinx-copybutton", "sphinx-design", "streamz", "twine", "vega-datasets", "vtk (==9.0.1)", "xarray", "xgboost"]
+build = ["param (>=1.9.2)", "pyct (>=0.4.4)", "setuptools (>=42)", "bokeh (>=2.4.3,<2.5.0)", "pyviz-comms (>=0.7.4)", "requests", "packaging", "bleach", "tqdm (>=4.48.0)"]
+doc = ["jupyterlab", "holoviews (>1.14.1)", "matplotlib", "pillow", "plotly", "nbsite (>=0.7.2rc2)", "pydata-sphinx-theme (<=0.9.0)", "sphinx-copybutton", "sphinx-design"]
+examples = ["hvplot", "plotly (>=4.0)", "altair", "streamz", "vega-datasets", "vtk (==9.0.1)", "scikit-learn", "datashader", "jupyter-bokeh (>=3.0.2)", "django (<4)", "channels", "pyvista (<0.33)", "ipywidgets", "ipywidgets-bokeh", "ipyvolume", "ipyleaflet", "ipympl", "folium", "xarray", "pyinstrument (>=4.0)", "aiohttp", "croniter", "graphviz", "networkx (>=2.5)", "pygraphviz", "seaborn", "pydeck", "lxml", "python-graphviz", "xgboost", "ipyvuetify", "reacton"]
+recommended = ["jupyterlab", "holoviews (>1.14.1)", "matplotlib", "pillow", "plotly"]
+tests = ["flake8", "parameterized", "pytest", "nbval", "flaky", "pytest-xdist", "pytest-cov", "pre-commit", "folium", "ipympl", "scipy", "twine", "pandas (>=1.3)", "ipython (>=7.0)", "holoviews", "diskcache", "markdown-it-py", "ipyvuetify", "reacton", "lxml"]
+ui = ["playwright", "pytest-playwright"]
+
+[[package]]
+name = "param"
+version = "1.12.3"
+description = "Make your Python code clearer and more reliable by declaring Parameters."
+category = "main"
+optional = false
+python-versions = ">=2.7"
+
+[package.extras]
+all = ["aiohttp", "flake8", "graphviz", "ipython (!=8.7.0)", "myst-parser", "myst-nb (==0.12.2)", "nbconvert", "nbsite (==0.8.0rc2)", "pandas", "panel", "pydata-sphinx-theme (<0.9.0)", "pygraphviz", "pytest", "pytest-cov", "sphinx-copybutton"]
+doc = ["pygraphviz", "nbsite (==0.8.0rc2)", "pydata-sphinx-theme (<0.9.0)", "myst-parser", "nbconvert", "graphviz", "myst-nb (==0.12.2)", "sphinx-copybutton", "aiohttp", "panel", "pandas", "ipython (!=8.7.0)"]
+tests = ["pytest", "pytest-cov", "flake8"]
+
+[[package]]
 name = "pillow"
 version = "9.4.0"
 description = "Python Imaging Library (Fork)"
@@ -274,6 +405,23 @@ python-versions = ">=3.6"
 [package.extras]
 dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
+
+[[package]]
+name = "pyct"
+version = "0.4.8"
+description = "Python package common tasks for users (e.g. copy examples, fetch data, ...)"
+category = "main"
+optional = false
+python-versions = ">=2.7"
+
+[package.dependencies]
+param = ">=1.7.0"
+
+[package.extras]
+build = ["setuptools", "param (>=1.7.0)"]
+cmd = ["pyyaml", "requests"]
+doc = ["nbsite", "sphinx-ioam-theme"]
+tests = ["flake8", "pytest"]
 
 [[package]]
 name = "pyparsing"
@@ -349,6 +497,48 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "pyviz-comms"
+version = "2.2.1"
+description = "Bidirectional communication for the HoloViz ecosystem."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+param = "*"
+
+[package.extras]
+all = ["flake8", "jupyter-packaging (>=0.7.9,<0.8.0)", "jupyterlab (>=3.0,<4.0)", "keyring", "pytest", "rfc3986", "setuptools (>=40.8.0,<61)", "twine"]
+build = ["setuptools (>=40.8.0,<61)", "jupyterlab (>=3.0,<4.0)", "jupyter-packaging (>=0.7.9,<0.8.0)", "twine", "rfc3986", "keyring"]
+tests = ["flake8", "pytest"]
+
+[[package]]
+name = "pyyaml"
+version = "6.0"
+description = "YAML parser and emitter for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "requests"
+version = "2.27.1"
+description = "Python HTTP for Humans."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = {version = ">=2.0.0,<2.1.0", markers = "python_version >= \"3\""}
+idna = {version = ">=2.5,<4", markers = "python_version >= \"3\""}
+urllib3 = ">=1.21.1,<1.27"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
+use_chardet_on_py3 = ["chardet (>=3.0.2,<5)"]
+
+[[package]]
 name = "setuptools-scm"
 version = "7.1.0"
 description = "the blessed package to manage your versions by scm tags"
@@ -390,6 +580,31 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "tornado"
+version = "6.2"
+description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
+category = "main"
+optional = false
+python-versions = ">= 3.7"
+
+[[package]]
+name = "tqdm"
+version = "4.64.1"
+description = "Fast, Extensible Progress Meter"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
+
+[[package]]
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -397,14 +612,51 @@ category = "main"
 optional = false
 python-versions = ">=3.7"
 
+[[package]]
+name = "urllib3"
+version = "1.26.14"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.extras]
+brotli = ["brotlicffi (>=0.8.0)", "brotli (>=1.0.9)", "brotlipy (>=0.6.0)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "urllib3-secure-extra", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+
+[[package]]
+name = "webencodings"
+version = "0.5.1"
+description = "Character encoding aliases for legacy web content"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "zipp"
+version = "3.11.0"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "furo", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.itertools", "func-timeout", "jaraco.functools", "more-itertools", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "pytest-flake8"]
+
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "b67a7b6b97bc28021a6dea60655c4975370c76c39b386051075c0848e84f3f53"
+python-versions = ">=3.9"
+content-hash = "5e814ce33a2c735e0e05fa835ce0a449c22d15c00de23214564174007d18668f"
 
 [metadata.files]
 altair = []
 attrs = []
+bleach = []
+bokeh = []
+certifi = []
+charset-normalizer = []
 colorama = []
 contourpy = []
 coverage = []
@@ -413,26 +665,40 @@ entrypoints = []
 et-xmlfile = []
 exceptiongroup = []
 fonttools = []
+idna = []
+importlib-metadata = []
 iniconfig = []
 jinja2 = []
 jsonschema = []
 kiwisolver = []
+markdown = []
 markupsafe = []
 matplotlib = []
 numpy = []
 openpyxl = []
 packaging = []
 pandas = []
+panel = []
+param = []
 pillow = []
 pluggy = []
+pyct = []
 pyparsing = []
 pyrsistent = []
 pytest = []
 pytest-cov = []
 python-dateutil = []
 pytz = []
+pyviz-comms = []
+pyyaml = []
+requests = []
 setuptools-scm = []
 six = []
 tomli = []
 toolz = []
+tornado = []
+tqdm = []
 typing-extensions = []
+urllib3 = []
+webencodings = []
+zipp = []
