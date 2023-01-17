@@ -19,6 +19,8 @@ dependencies:
   - imbalanced-learn
   - pip
   - lightgbm
+  - openpyxl
+  - pytest
   - pip:
     - joblib==1.1.0
     - mglearn
