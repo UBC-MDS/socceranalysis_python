@@ -1,8 +1,9 @@
-# Author: Manvir Singh Kohli
-import pandas as pd
-import numpy as np
 
-def get_outliers(df,var, method = "IQR",thresh=3):
+import numpy as np
+import pandas as pd
+
+def get_outliers(df,col, method = "SD",thresh=3):
+    
     """Returns outliers in the dataset based on values of a variable
 
     This function identifies outliers in the dataset based on either of the following methods:
@@ -15,13 +16,13 @@ def get_outliers(df,var, method = "IQR",thresh=3):
     
     Parameters
     ----------
-    df : pandas dataframe
+    df : dataframe
         Dataframe in  which outliers are to be identified.
-    var : str
+    col : str
         Variable in the dataframe based on which outliers are to be identified.
     method : str
         Name of the outlier identification method to be used. 
-        "IQR" for IQR method and "SD" for meand and standard deviation method.
+        "IQR" for IQR method and "SD" for mean and standard deviation method.
     thresh : int
         The value of k in the Mean and Standard Deviation Method formula above.
 
@@ -32,5 +33,25 @@ def get_outliers(df,var, method = "IQR",thresh=3):
 
     Examples
     --------
-    >>> get_outliers("Wages","IQR",3)
+    >>> get_outliers(df,"Wages","SD",3)
     """
+    assert isinstance(col,str) == True, "Column named used for outlier detection should be passed as string"
+    assert (col in df.columns) == True, f"Column {col} does not exist in data frame"
+    assert np.issubdtype(df[col].dtype, np.number) ==True, "Column used for outlier detection should be numeric"
+    
+    if method == "SD":
+        mean = np.mean(df[col])
+        std = np.std(df[col])
+        outliers = df[(df[col] > mean + thresh*std) | (df[col] < mean - thresh*std)]
+    
+    elif method == "IQR":
+        q1,q3 =  np.percentile(df[col], [25 ,75])
+        iqr = q3 - q1
+        outliers = df[(df[col] > q3 + 1.5*iqr) | (df[col] < q1 - 1.5*iqr)]
+        
+    return outliers
+        
+        
+        
+    
+        
