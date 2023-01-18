@@ -2,21 +2,17 @@
 
 socceranalysis is a powerful Python package designed to make it easy to analyze and understand soccer statistics. With its set of functions, you can quickly obtain summary statistics for a particular team, identify outliers based on market value, rank players by goals per game and display different plots. The package is built in a way that allows user to easily customize the functions to their own interests, giving them the flexibility to analyze the data in a way that is most meaningful to them. Whether you're a coach, a sports journalist or an analyst, socceranalysis will help you unlock the insights hidden in your soccer data and make more informed decisions.
 
+## Functions
 
 
+1. `find_team_stat`: provides a quick and easy way to understand the descriptive statistics of a team. (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/find_team_stat.py) 
 
-## Function 1: find_team_stat [Summary statistics of a particular team](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/find_team_stat.py) 
-* This function can provide a quick and easy way to understand the descriptive statistics of a team.
+2. `rankingplayers`:  Ranks players based on specific attributes (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/playerranking.py)
 
+3. `get_outliers`: Identifes outliers using statistical methods (interquartile range or standard deviations) (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/outlier_identification.py)
 
-## Function 2: rankingplayers [Ranking the players by goal per game](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/playerranking.py)
-* This function provides an easy way to compare the performance of players based on specific attributes.
+4. `soc_viz_stats` :  Generates meaningful visualizations to help users understand and interpret the data (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/viz_stats.py)
 
-## Function 3: get_outliers [Getting outliers based on the market value of a player](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/outlier_identification.py)
-*  This function allows users to identify players who are outliers i.e. players who stand out from the majority and cause the data to be skewed. It uses statistical methods (interquartile range or standard deviations) to determine which players are considered outliers. Any numeric feature can be used to identify outliers.
-
-## Function 4: soc_viz_stats [Visual descriptive statistics based on user selection](https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/viz_stats.py)
-* This function is a useful tool for quickly generating meaningful visualizations that can help users understand and interpret the data.
 
 
 socceranalysis can be used in conjunction with other popular Python packages such as [pandas](https://github.com/pandas-dev/pandas) and [scikit-learn](https://github.com/scikit-learn/scikit-learn) to perform more advanced data analysis and machine learning tasks. For example, users can use pandas to manipulate and clean their soccer data, and then use this package to perform specific soccer-related analysis on the cleaned data. Additionally, socceranalysis can be used in conjunction with scikit-learn for machine learning tasks on soccer data. They are designed to be a higher-level, more user-friendly and declarative interface based on [Altair](https://github.com/altair-viz/altair) for performing specific soccer-related analysis and visualization tasks. Users can perform similar visualization using [matplotlib](https://github.com/matplotlib/matplotlib). Overall, socceranalysis is a valuable addition to the Python ecosystem as it provides a specialized tool for analyzing and understanding soccer data without the need for writing complex code, this can be especially useful for users who may not have extensive experience with data analysis or visualization.
@@ -31,21 +27,32 @@ $ pip install socceranalysis
 
 ## Usage
 
+### get_outliers
 ```bash 
 data = pd.read_excel('soccer_data.xlsx')
 from  socceranalysis.outlier_identification import get_outliers
+get_outliers(data,"Wages_Euros","SD",3)
+```
+###  soc_viz_stats
+```bash
 from socceranalysis.viz_stats import *
-get_outlier(data,"Wages_Euros","SD",3)
+
 # scatter plots of two given columns
 soc_viz_stats_scatter('age','Goals_total',df = data)
 # histogram of one given column
 soc_viz_stats_hist('age',df = data)
 # dashboard contains dropdown menus
 soc_viz_stats_get_dashboard(single_col_vis = False , col = ['age', 'Appearances total', 'Wages_Euros', 'Goals_total',  'Yellow_Cards_Total'])
-
-
 ```
 
+## Contributors
+
+|  	 Core contributor| Github.com username| 
+|---------|---|
+|  Flora Ouedraogo |  @florawendy19 | 
+|  Gaoxiang Wang |  @louiewang820 | 
+|  Manvir Kohli | @manvirsingh96 |
+| Vincent Ho | @vincentho32 |
 
 ## Contributing
 
