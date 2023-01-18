@@ -45,6 +45,14 @@ soc_viz_stats_hist('age',df = data)
 soc_viz_stats_get_dashboard(single_col_vis = False , col = ['age', 'Appearances total', 'Wages_Euros', 'Goals_total',  'Yellow_Cards_Total'])
 ```
 
+## Contributors
+
+|  	 Core contributor| Github.com username| 
+|---------|---|
+|  Flora Ouedraogo |  @florawendy19 | 
+|  Gaoxiang Wang |  @louiewang820 | 
+|  Manvir Kohli | @manvirsingh96 |
+| Vincent Ho | @vincentho32 |
 
 ## Contributing
 
