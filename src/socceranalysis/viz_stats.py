@@ -96,8 +96,7 @@ def soc_viz_stats_get_dashboard(single_col_vis = True , col = ['age', 'Appearanc
     
     Examples
     --------
-    >>> data = pd.read_excel("soccer_data.xlsx")
-    >>> soc_viz_stats_get_dashboard(data, single_col_vis = True , col = ['age', 'Appearances total', 'Wages_Euros', 'Goals_total',  'Yellow_Cards_Total'])
+    >>> soc_viz_stats_get_dashboard(single_col_vis = True , col = ['age', 'Appearances total', 'Wages_Euros', 'Goals_total',  'Yellow_Cards_Total'])
     """
     assert isinstance(single_col_vis,bool) == True, "single_col_vis should be a binary input"
     assert isinstance(col,list) == True, "Column named used should be passed as a list"
