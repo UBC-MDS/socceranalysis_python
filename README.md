@@ -31,12 +31,11 @@ $ pip install socceranalysis_python
 
 ## Usage
 
-`
+```bash 
 data = pd.read_excel('soccer_data.xlsx')
 from  socceranalysis.outlier_identification import get_outliers
 get_outlier(data,"Wages_Euros","SD",3)
-`
-
+```
 ## Contributing
 
 Authors: Vincent Ho, Manvir Singh Kohli, Gaoxiang Wang, Flora Ouedraogo
