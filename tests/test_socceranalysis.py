@@ -37,7 +37,7 @@ def test_hist():
     assert small_hist.mark == 'bar', 'mark should be a bar'
     assert small_hist.encoding.x.bin.maxbins >= 20 , "maxbin should exist and set to be greater than 20"
     
-def c():
+def test_dashboard():
     assert soc_viz_stats_get_dashboard() == None, 'this function should return None'
     
     
