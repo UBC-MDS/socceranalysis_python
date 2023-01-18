@@ -7,7 +7,7 @@ import numpy as np
 # using Altair with panel in the next cell
 pn.extension('vega')   
 # load data
-data = pd.read_excel("./soccer_data.xlsx")
+data = pd.read_excel("soccer_data.xlsx")
 
 def soc_viz_stats_scatter(x_col, y_col,df=data):
     """Create a scatter plot of two chosen numerical features.
