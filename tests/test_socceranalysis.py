@@ -11,10 +11,10 @@ small_data = pd.DataFrame({
 small_scatter = soc_viz_stats_scatter('age','Goals_total',df = small_data)
 small_hist = soc_viz_stats_hist('age',df = small_data)
 
+data = pd.read_excel("soccer_data.xlsx")
 
 def test_get_outliers():
-    """Test word counting from a file."""
-    data = pd.read_excel("soccer_data.xlsx")
+    """Test outlier identification in a data set"""
     assert len(get_outliers(data,"Market_Value_Euros","SD",3)) == 108, "There should 108 outliers when using mean +- 3*sd on Market Value"
     assert len(get_outliers(data,"Market_Value_Euros","IQR")) == 328, "There should 328 outliers when using IQR on Market Value"
     assert len(get_outliers(data,"Wages_Euros","SD",3)) == 104, "There should 104 outliers when using SD method on Wages"
