@@ -27,6 +27,13 @@ $ pip install socceranalysis
 
 ## Usage
 
+
+###  find_team_stat
+```bash
+from socceranalysis.find_team_stat import *
+data = pd.read_excel('soccer_data.xlsx')
+find_team_stat(data , "Manchester United", "Market_Value_Euros")
+```
 ### get_outliers
 ```bash 
 data = pd.read_excel('soccer_data.xlsx')
