@@ -1,6 +1,27 @@
 from socceranalysis.outlier_identification import *
 from socceranalysis.viz_stats import *
 from socceranalysis.find_team_stat import *
+import pandas as pd
+import numpy as np
+
+sample_soccer_dict = {'Wages_Euros': [300000,	
+                      575000,	150000,	475000,375000,	225000,	225000,	
+                      200000,	225000,	250000,	250000,	375000,	200000,
+                      150000,	225000,	225000,	200000,	225000,	190000,	
+                      300000,	180000,	400000,	325000,	200000,	190000,	170000,	
+                      300000,	140000,	225000,	350000,	190000]
+                      ,
+                      'Market_Value_Euros' : [105500000,	95500000,	
+                      93500000,	90000000,	90000000,	83000000,	
+                      80500000,	78000000,	76500000,	73000000,	
+                      72500000,	69000000,	68000000,	67500000,	66000000,
+                      64500000,	64000000,	62000000,	61000000,	60000000,	
+                      60000000,	58500000,	57000000,	57000000,	56500000,	
+                      56000000,	55000000,	54500000,	53500000,	53000000,	
+                      52000000]}
+
+sample_soccer_data = pd.DataFrame(sample_soccer_dict)  
+
 
 small_data = pd.DataFrame({
         'age': np.array([19, 19, 20, 34, 21]),
@@ -19,13 +40,12 @@ findstat_example = find_team_stat(data, "Manchester United", "Market_Value_Euros
 
 def test_get_outliers():
     """Test outlier identification in a data set"""
-    assert len(get_outliers(data,"Market_Value_Euros","SD",3)) == 108, "There should 108 outliers when using mean +- 3*sd on Market Value"
-    assert len(get_outliers(data,"Market_Value_Euros","IQR")) == 328, "There should 328 outliers when using IQR on Market Value"
-    assert len(get_outliers(data,"Wages_Euros","SD",3)) == 104, "There should 104 outliers when using SD method on Wages"
-    assert len(get_outliers(data,"Wages_Euros","IQR")) == 324 , "There should 324 outliers when using IQR method on Wages"
-    assert len(get_outliers(data,"Wages_Euros","IQR").columns) == 20, "The outlier dataframe is incorrect (total columns should be 20)"
-    assert isinstance(data,pd.DataFrame) == True, "Input data should be a pandas dataframe"
-    assert isinstance(get_outliers(data,"Wages_Euros","IQR"),pd.DataFrame) == True ,"Ouptut data should be a pandas dataframe"
+    assert len(get_outliers(sample_soccer_data,"Market_Value_Euros","SD",2)) == 1, "There should 1 outlier when using mean +- 2*sd on Market Value"
+    assert len(get_outliers(sample_soccer_data,"Market_Value_Euros","IQR")) == 0, "There should be no outliers when using IQR method on Market Value"
+    assert len(get_outliers(sample_soccer_data,'Wages_Euros',"SD",1)) == 8, "There should 8 outliers when using SD method with threshold 1 on Wages"
+    assert len(get_outliers(sample_soccer_data,'Wages_Euros',"IQR")) == 2 , "There should 2 outliers when using IQR method on Wages"
+    assert len(get_outliers(sample_soccer_data,"Wages_Euros","IQR").columns) == 2, "The outlier dataframe is incorrect (total columns should be 2)"
+    assert isinstance(sample_soccer_data,pd.DataFrame) == True, "Input data should be a pandas dataframe"
     
     
 def test_scatter():
