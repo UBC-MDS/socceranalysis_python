@@ -35,6 +35,7 @@ def get_outliers(df,col, method = "SD",thresh=3):
     --------
     >>> get_outliers(df,"Wages_Euros","SD",3)
     """
+    assert isinstance (df,pd.DataFrame) == True, "Input data must be a dataframe"
     assert isinstance(col,str) == True, "Column named used for outlier detection should be passed as string"
     assert (col in df.columns) == True, f"Column {col} does not exist in data frame"
     assert np.issubdtype(df[col].dtype, np.number) ==True, "Column used for outlier detection should be numeric"
