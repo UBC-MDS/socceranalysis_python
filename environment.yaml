@@ -13,6 +13,7 @@ dependencies:
   - eli5
   - shap
   - jinja2
+  - altair
   - altair_saver
   - selenium<4.3.0
   - pandas<1.5

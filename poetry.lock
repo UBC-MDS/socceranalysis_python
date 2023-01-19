@@ -331,6 +331,17 @@ files = [
 ]
 
 [[package]]
+name = "display"
+version = "1.0.0"
+description = "simple printer of nested list"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "display-1.0.0.tar.gz", hash = "sha256:899b28eb6b2e9609b04c2961d1af8b2695b04eb48c24b40cc73bf1bd4d59d4bc"},
+]
+
+[[package]]
 name = "entrypoints"
 version = "0.4"
 description = "Discover and load entry points from installed packages."
@@ -1586,4 +1597,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9"
-content-hash = "40472fb54727b3bf685bfc85dab56e402a19d9ffe4d23471dded2b658b346749"
+content-hash = "5c0f9a02e9719677c26882c5229f02a869da6eb9288175da9e2061784109f97e"
