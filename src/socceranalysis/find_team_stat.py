@@ -1,7 +1,8 @@
 # Author: Vincent Ho
-import altair as alt
-import warnings
 import pandas as pd
+import altair as alt
+from IPython.display import display
+
 
 def find_team_stat(df, team_name, feature="age"):
     """Returns the descriptive statistic table and box plot of a particular team.
@@ -34,5 +35,22 @@ def find_team_stat(df, team_name, feature="age"):
 
     Examples
     --------
-    >>> find_team_stat(soccer_df, "Manchester United", "Market Value")
+    >>> find_team_stat(soccer_df, "Manchester United", ""Market_Value_Euros"")
     """
+    
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("The data must be in type of Pandas DataFrame.")
+        
+    if not isinstance(team_name, str):
+            raise TypeError("Incorrect type in argument: `team_name`. Please pass in a string for `team_name`, and follow the team name format under column 'Team' in the dataset.")
+            
+    if not isinstance(feature, str):
+            raise TypeError("Incorrect type in argument: `feature`. Please pass in a string for `feature`, and follow the name format of any numerical column in the dataset.") 
+    
+    team_df = df.query(f"Team==@team_name")
+    
+    display(team_df.describe())
+    
+    box_plot = alt.Chart(team_df).mark_boxplot().encode( x = feature, y = "Team")
+    
+    return box_plot
