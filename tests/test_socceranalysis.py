@@ -1,5 +1,7 @@
 from socceranalysis.outlier_identification import *
 from socceranalysis.viz_stats import *
+from socceranalysis.find_team_stat import *
+
 small_data = pd.DataFrame({
         'age': np.array([19, 19, 20, 34, 21]),
         'Goals_total' : np.array([24, 1111, 4, 50, 4]),
@@ -12,6 +14,8 @@ small_scatter = soc_viz_stats_scatter('age','Goals_total',df = small_data)
 small_hist = soc_viz_stats_hist('age',df = small_data)
 
 data = pd.read_excel("soccer_data.xlsx")
+
+findstat_example = find_team_stat(data, "Manchester United", "Market_Value_Euros")
 
 def test_get_outliers():
     """Test outlier identification in a data set"""
@@ -39,5 +43,13 @@ def test_hist():
     
 def test_dashboard():
     assert soc_viz_stats_get_dashboard() == None, 'this function should return None'
+    
+    
+def test_find_team_stat():
+    "Test output is a boxplot with correct axis"
+    assert isinstance(findstat_example , alt.vegalite.v4.api.Chart) == True, "Output should be an altair chart"
+    assert findstat_example.mark == 'boxplot', 'mark should be a boxplot'
+    assert findstat_example.encoding.x.shorthand == 'Market_Value_Euros', 'Your feature selection should be mapped to the x axis'
+    assert findstat_example.encoding.y.shorthand == 'Team', 'Team should be mapped to the y axis'
     
     

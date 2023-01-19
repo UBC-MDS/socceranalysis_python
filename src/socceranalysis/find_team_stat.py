@@ -35,7 +35,7 @@ def find_team_stat(df, team_name, feature="age"):
 
     Examples
     --------
-    >>> find_team_stat(soccer_df, "Manchester United", ""Market_Value_Euros"")
+    >>> find_team_stat(soccer_df, "Manchester United", "Market_Value_Euros")
     """
     
     if not isinstance(df, pd.DataFrame):
