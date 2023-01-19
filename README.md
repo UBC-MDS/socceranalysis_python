@@ -55,6 +55,12 @@ soc_viz_stats_hist('age',df = data)
 # dashboard contains dropdown menus
 soc_viz_stats_get_dashboard(single_col_vis = False , col = ['age', 'Appearances total', 'Wages_Euros', 'Goals_total',  'Yellow_Cards_Total'])
 ```
+### playerranking
+```bash
+from socceranalysis.rankingplayers import *
+data = pd.read_excel('soccer_data.xlsx')
+rankingplayers(data, "Goals_total", "Assists_Total")
+```
 
 ## Contributors
 
