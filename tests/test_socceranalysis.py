@@ -1,7 +1,7 @@
 from socceranalysis.outlier_identification import *
 from socceranalysis.viz_stats import *
 from socceranalysis.find_team_stat import *
-from socceranalysis.rankingplayers import *
+from socceranalysis.playerranking import *
 import pandas as pd
 import numpy as np
 
