@@ -31,8 +31,23 @@ small_data = pd.DataFrame({
         'Team' : ['C' , 'D', 'E', 'F', 'G'],
         'Position_Final' :['R', 'R', 'R', 'R', 'R']
     })
+
+test_df_1 = pd.DataFrame({
+        'Name' : ['Lous' , 'Flora' , 'Vincet', 'Leo', 'manvir']
+    })
+
+test_df_2 = pd.DataFrame({
+        'Name' : ['Flora' , 'manvir' , 'Leo', 'Vincet', 'Lous']
+    })
+
+test_df_3 = pd.DataFrame({
+        'Name' : [ 'manvir', 'Flora' , 'Leo' , 'Lous', 'Vincet']
+    })
+
+
 small_scatter = soc_viz_stats_scatter('age','Goals_total',df = small_data)
 small_hist = soc_viz_stats_hist('age',df = small_data)
+
 
 data = pd.read_excel("soccer_data.xlsx")
 
@@ -75,4 +90,10 @@ def test_find_team_stat():
     assert findstat_example.encoding.x.shorthand == 'Market_Value_Euros', 'Your feature selection should be mapped to the x axis'
     assert findstat_example.encoding.y.shorthand == 'Team', 'Team should be mapped to the y axis'
     
-    
+
+
+def test_rankingplayers():
+    assert rankingplayers(small_data, "Goals_total").equals(test_df_1), "The test dataframe and the function return dataframe are different"  
+    assert rankingplayers(small_data, "age").equals(test_df_2), "he test dataframe and the function return dataframe are different"
+    assert rankingplayers(small_data, "Team").equals(test_df_3), "he test dataframe and the function return dataframe are different"
+
