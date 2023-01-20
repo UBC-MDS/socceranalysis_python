@@ -1,6 +1,7 @@
 from socceranalysis.outlier_identification import *
 from socceranalysis.viz_stats import *
 from socceranalysis.find_team_stat import *
+from socceranalysis.rankingplayers import *
 import pandas as pd
 import numpy as np
 
@@ -93,6 +94,7 @@ def test_find_team_stat():
 
 
 def test_rankingplayers():
+    "Test dataframe with the correct name order "
     assert rankingplayers(small_data, "Goals_total").equals(test_df_1), "The test dataframe and the function return dataframe are different"  
     assert rankingplayers(small_data, "age").equals(test_df_2), "he test dataframe and the function return dataframe are different"
     assert rankingplayers(small_data, "Team").equals(test_df_3), "he test dataframe and the function return dataframe are different"
