@@ -64,6 +64,7 @@ def test_get_outliers():
     
     
 def test_scatter():
+    """Test output is a scatter plot with correct axis"""
     assert small_scatter.encoding.x.shorthand == 'age', 'age should be in x axis'
     assert small_scatter.encoding.y.shorthand == 'Goals_total', 'Goals_total should be in y axis'
     assert small_scatter.mark == 'point', 'mark should be a point'
@@ -71,12 +72,14 @@ def test_scatter():
     assert small_scatter.encoding.color.shorthand == 'Continent', "color should be using 'Continent' column"
     
 def test_hist():
+    """Test output is a histogram with correct axis"""
     assert small_hist.encoding.x.shorthand == 'age', 'age should be in x axis'
     assert small_hist.encoding.y.shorthand =='count()', 'count() should be in y axis'
     assert small_hist.mark == 'bar', 'mark should be a bar'
     assert small_hist.encoding.x.bin.maxbins >= 20 , "maxbin should exist and set to be greater than 20"
     
 def test_dashboard():
+    """Test output is None for using the dashboard"""
     assert soc_viz_stats_get_dashboard() == None, 'this function should return None'
     
     
@@ -88,7 +91,9 @@ def test_find_team_stat():
     assert findstat_example.encoding.y.shorthand == 'Team', 'Team should be mapped to the y axis'
     
 
+
 def test_rankingplayers():
     assert rankingplayers(small_data, "Goals_total").equals(test_df_1), "The test dataframe and the function return dataframe are different"  
     assert rankingplayers(small_data, "age").equals(test_df_2), "he test dataframe and the function return dataframe are different"
     assert rankingplayers(small_data, "Team").equals(test_df_3), "he test dataframe and the function return dataframe are different"
+
