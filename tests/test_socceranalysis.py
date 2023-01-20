@@ -49,10 +49,12 @@ test_df_3 = pd.DataFrame({
 small_scatter = soc_viz_stats_scatter('age','Goals_total',df = small_data)
 small_hist = soc_viz_stats_hist('age',df = small_data)
 
+small_stat_box = find_team_stat(small_data, "C", "Goals_total")
+
 
 data = pd.read_excel("soccer_data.xlsx")
 
-findstat_example = find_team_stat(data, "Manchester United", "Market_Value_Euros")
+
 
 def test_get_outliers():
     """Test outlier identification in a data set"""
@@ -85,11 +87,12 @@ def test_dashboard():
     
     
 def test_find_team_stat():
-    "Test output is a boxplot with correct axis"
-    assert isinstance(findstat_example , alt.vegalite.v4.api.Chart) == True, "Output should be an altair chart"
-    assert findstat_example.mark == 'boxplot', 'mark should be a boxplot'
-    assert findstat_example.encoding.x.shorthand == 'Market_Value_Euros', 'Your feature selection should be mapped to the x axis'
-    assert findstat_example.encoding.y.shorthand == 'Team', 'Team should be mapped to the y axis'
+    "Test function's output to see if it is a boxplot with correct axis"
+    assert small_stat_box.to_dict()['mark'] == 'boxplot', 'mark should be a boxplot'
+    assert small_stat_box.to_dict()['encoding']['x']['field'] == 'Goals_total', 'Goals_total should be mapped to the x axis'
+    assert small_stat_box.to_dict()['encoding']['x']['type'] == 'quantitative', 'The x-axis should be quantitative.'
+    assert small_stat_box.to_dict()['encoding']['y']['field'] == 'Team', 'Team should be mapped to the y axis'
+    assert small_stat_box.to_dict()['encoding']['y']['type'] == 'nominal', 'The y-axis should be nominal.'
     
 
 
