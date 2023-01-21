@@ -12,9 +12,9 @@ socceranalysis is a powerful Python package designed to make it easy to analyze 
 3. `get_outliers`: Identifes outliers using statistical methods (interquartile range or standard deviations) (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/outlier_identification.py)
 
 4. `soc_viz_stats` :  Generates meaningful visualizations to help users understand and interpret the data (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/viz_stats.py)
-* `soc_viz_stats_scatter` : Generate a scatter plot for two given numeric columns
+* `soc_viz_stats_scatter` : Generate a scatter plot for two given numeric columns with a slider to control age 
 * `soc_viz_stats_hist` :  Generate a histogram for one given numeric columns
-* `soc_viz_stats_get_dashboard`: Generate a dashboard with a drop down menu for selecting columns.  
+
 
 
 
@@ -49,11 +49,9 @@ Note: Keep the data file in the same working direcotry before import this functi
 from socceranalysis.viz_stats import *
 
 # scatter plots of two given columns
-soc_viz_stats_scatter('age','Goals_total',df = data)
+soc_viz_stats_scatter('age','Goals_total', data)
 # histogram of one given column
-soc_viz_stats_hist('age',df = data)
-# dashboard contains dropdown menus
-soc_viz_stats_get_dashboard(single_col_vis = False , col = ['age', 'Appearances total', 'Wages_Euros', 'Goals_total',  'Yellow_Cards_Total'])
+soc_viz_stats_hist('age', data)
 ```
 ### playerranking
 ```bash
