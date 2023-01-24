@@ -1,6 +1,11 @@
 name: ci-cd
 
-on: [push, pull_request]
+on:
+  push:
+    branches: 
+      - '**' # all branches
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   ci:
@@ -12,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.9"
+          python-version: ">=3.9"
 
       - name: Check-out repository
         uses: actions/checkout@v2
