@@ -1,3 +1,5 @@
+[![docs](https://img.shields.io/docsrs/passing)](https://soccer-analysis-python.readthedocs.io/en/latest/)
+
 # socceranalysis
 
 socceranalysis is a powerful Python package designed to make it easy to analyze and understand soccer statistics. With its set of functions, you can quickly obtain summary statistics for a particular team, identify outliers based on market value, rank players by goals per game and display different plots. The package is built in a way that allows user to easily customize the functions to their own interests, giving them the flexibility to analyze the data in a way that is most meaningful to them. Whether you're a coach, a sports journalist or an analyst, socceranalysis will help you unlock the insights hidden in your soccer data and make more informed decisions.
@@ -44,7 +46,7 @@ from  socceranalysis.outlier_identification import get_outliers
 get_outliers(data,"Wages_Euros","SD",3)
 ```
 ###  soc_viz_stats
-Note: Keep the data file in the same working direcotry before import this function
+
 ```bash
 from socceranalysis.viz_stats import *
 
