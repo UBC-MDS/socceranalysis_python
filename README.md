@@ -28,6 +28,9 @@ socceranalysis can be used in conjunction with other popular Python packages suc
 
 ```bash
 $ pip install socceranalysis
+
+# directly from test pypi
+$ pip install -i https://test.pypi.org/simple/ socceranalysis
 ```
 
 ## Usage
