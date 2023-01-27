@@ -30,7 +30,8 @@ sphinx-autoapi = "^2.0.1"
 sphinx-rtd-theme = "^1.1.1"
 
 [tool.semantic_release]
-version_variable = "pyproject.toml:version" # version location
+version_variable = "socceranalysis/__init__.py:__version__" # version location
+version_source = "commit"
 branch = "main"                             # branch to make releases of
 changelog_file = "CHANGELOG.md"             # changelog file
 build_command = "poetry build"              # build dists
