@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "socceranalysis"
-version = "0.0.3"
+version = "0.0.4"
 description = "Doing soccer stats analysis."
 authors = ["Group 15 "]
 license = "MIT"
