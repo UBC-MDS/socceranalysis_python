@@ -1,0 +1,60 @@
+:py:mod:`socceranalysis.viz_stats`
+==================================
+
+.. py:module:: socceranalysis.viz_stats
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   socceranalysis.viz_stats.soc_viz_stats_scatter
+   socceranalysis.viz_stats.soc_viz_stats_hist
+
+
+
+.. py:function:: soc_viz_stats_scatter(x_col, y_col, df)
+
+   Create a scatter plot of two chosen numerical features.
+
+   :param x_col: name of the feature in horizontal axis.
+   :type x_col: str
+   :param y_col: name of the feature in vertical axis.
+   :type y_col: str
+   :param df: The dataframe of the feature
+   :type df: pandas dataframe
+
+   :returns: **Chart** -- an altair chart
+   :rtype: altair.vegalite.v4.api.Chart
+
+   .. rubric:: Examples
+
+   >>> data = pd.read_excel("soccer_data.xlsx")
+   >>> soc_viz_stats_scatter('age', 'Wages_Euros', data)
+
+
+.. py:function:: soc_viz_stats_hist(x_col, df)
+
+   Create a histogram of one chosen numerical feature.
+
+   :param x_col: name of the feature in horizontal axis.
+
+                 name of the feature in vertical axis.
+   :type x_col: str
+   :param df: The dataframe of the feature
+   :type df: pandas dataframe
+
+   :returns: **Chart** -- an altair chart
+   :rtype: altair.vegalite.v4.api.Chart
+
+   .. rubric:: Examples
+
+   >>> data = pd.read_excel("soccer_data.xlsx")
+   >>> soc_viz_stats_hist('age', data)
+
+

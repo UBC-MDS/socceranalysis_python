@@ -1,0 +1,49 @@
+:py:mod:`socceranalysis.outlier_identification`
+===============================================
+
+.. py:module:: socceranalysis.outlier_identification
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   socceranalysis.outlier_identification.get_outliers
+
+
+
+.. py:function:: get_outliers(df, col, method='SD', thresh=3)
+
+   Returns outliers in the dataset based on values of a variable
+
+   This function identifies outliers in the dataset based on either of the following methods:
+
+   1. Interquartile Range (IQR) Method: Identifies all values less than Q1 - 1.5*IQR and
+   greater than Q3 + 1.5*IQR where IQR = Q3-Q1, are identified as outliers.
+
+   2. Mean and Standard Deviation Method: Identifies all values less than
+   mean - k*standard_deviation and greater than mean + k*standard_deviation as outliers.
+
+   :param df: Dataframe in  which outliers are to be identified.
+   :type df: dataframe
+   :param col: Variable in the dataframe based on which outliers are to be identified.
+   :type col: str
+   :param method: Name of the outlier identification method to be used.
+                  "IQR" for IQR method and "SD" for mean and standard deviation method.
+   :type method: str
+   :param thresh: The value of k in the Mean and Standard Deviation Method formula above.
+   :type thresh: int
+
+   :returns: Subset of original dataframe  containing only rows corresponding to outliers.
+   :rtype: dataframe
+
+   .. rubric:: Examples
+
+   >>> get_outliers(df,"Wages_Euros","SD",3)
+
+

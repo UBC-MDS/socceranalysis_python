@@ -1,0 +1,38 @@
+:py:mod:`socceranalysis.playerranking`
+======================================
+
+.. py:module:: socceranalysis.playerranking
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   socceranalysis.playerranking.rankingplayers
+
+
+
+.. py:function:: rankingplayers(df, *col_name)
+
+   Returns a sorted table of players based on which variables the user decide to use to rank players.
+   This function can help users find the most and less important variables which can be used to compare
+   one player and the other in terms of performances.
+
+   :param df: The dataframe of the soccer dataset
+   :type df: pandas dataframe
+   :param col_name: The name of the columns which the user decide to use to rank the players one
+   :type col_name: str
+
+   :returns: **ranked_df** -- This is the sorted data frame by column name
+   :rtype: pandas dataframe
+
+   .. rubric:: Examples
+
+   >>> rankingplayers(soccer_df, "Goals_total", "Assists_Total")
+
+
