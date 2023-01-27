@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>socceranalysis &mdash; socceranalysis  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example usage" href="example.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> socceranalysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Welcome to the Soccer anaylsis!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conduct.html">Contributor Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">socceranalysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">socceranalysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="socceranalysis">
+<h1>socceranalysis<a class="headerlink" href="#socceranalysis" title="Permalink to this heading"></a></h1>
+<p>socceranalysis is a powerful Python package designed to make it easy to analyze and understand soccer statistics. With its set of functions, you can quickly obtain summary statistics for a particular team, identify outliers based on market value, rank players by goals per game and display different plots. The package is built in a way that allows user to easily customize the functions to their own interests, giving them the flexibility to analyze the data in a way that is most meaningful to them. Whether you’re a coach, a sports journalist or an analyst, socceranalysis will help you unlock the insights hidden in your soccer data and make more informed decisions.</p>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">find_team_stat</span></code>: provides a quick and easy way to understand the descriptive statistics of a team. (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/find_team_stat.py)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rankingplayers</span></code>:  Ranks players based on specific attributes (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/playerranking.py)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_outliers</span></code>: Identifes outliers using statistical methods (interquartile range or standard deviations) (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/outlier_identification.py)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">soc_viz_stats</span></code> :  Generates meaningful visualizations to help users understand and interpret the data (https://github.com/UBC-MDS/socceranalysis_python/blob/main/src/socceranalysis/viz_stats.py)</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">soc_viz_stats_scatter</span></code> : Generate a scatter plot for two given numeric columns with a slider to control age</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">soc_viz_stats_hist</span></code> :  Generate a histogram for one given numeric columns</p></li>
+</ul>
+</section>
+<section id="python-ecosystem">
+<h2>Python ecosystem<a class="headerlink" href="#python-ecosystem" title="Permalink to this heading"></a></h2>
+<p>socceranalysis can be used in conjunction with other popular Python packages such as <a class="reference external" href="https://github.com/pandas-dev/pandas">pandas</a> and <a class="reference external" href="https://github.com/scikit-learn/scikit-learn">scikit-learn</a> to perform more advanced data analysis and machine learning tasks. For example, users can use pandas to manipulate and clean their soccer data, and then use this package to perform specific soccer-related analysis on the cleaned data. Additionally, socceranalysis can be used in conjunction with scikit-learn for machine learning tasks on soccer data. They are designed to be a higher-level, more user-friendly and declarative interface based on <a class="reference external" href="https://github.com/altair-viz/altair">Altair</a> for performing specific soccer-related analysis and visualization tasks. Users can perform similar visualization using <a class="reference external" href="https://github.com/matplotlib/matplotlib">matplotlib</a>. Overall, socceranalysis is a valuable addition to the Python ecosystem as it provides a specialized tool for analyzing and understanding soccer data without the need for writing complex code, this can be especially useful for users who may not have extensive experience with data analysis or visualization.</p>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>socceranalysis
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<section id="find-team-stat">
+<h3>find_team_stat<a class="headerlink" href="#find-team-stat" title="Permalink to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>from<span class="w"> </span>socceranalysis.find_team_stat<span class="w"> </span>import<span class="w"> </span>*
+<span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>pd.read_excel<span class="o">(</span><span class="s1">&#39;soccer_data.xlsx&#39;</span><span class="o">)</span>
+find_team_stat<span class="o">(</span>data<span class="w"> </span>,<span class="w"> </span><span class="s2">&quot;Manchester United&quot;</span>,<span class="w"> </span><span class="s2">&quot;Market_Value_Euros&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-outliers">
+<h3>get_outliers<a class="headerlink" href="#get-outliers" title="Permalink to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>pd.read_excel<span class="o">(</span><span class="s1">&#39;soccer_data.xlsx&#39;</span><span class="o">)</span>
+from<span class="w">  </span>socceranalysis.outlier_identification<span class="w"> </span>import<span class="w"> </span>get_outliers
+get_outliers<span class="o">(</span>data,<span class="s2">&quot;Wages_Euros&quot;</span>,<span class="s2">&quot;SD&quot;</span>,3<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="soc-viz-stats">
+<h3>soc_viz_stats<a class="headerlink" href="#soc-viz-stats" title="Permalink to this heading"></a></h3>
+<p>Note: Keep the data file in the same working direcotry before import this function</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>from<span class="w"> </span>socceranalysis.viz_stats<span class="w"> </span>import<span class="w"> </span>*
+
+<span class="c1"># scatter plots of two given columns</span>
+soc_viz_stats_scatter<span class="o">(</span><span class="s1">&#39;age&#39;</span>,<span class="s1">&#39;Goals_total&#39;</span>,<span class="w"> </span>data<span class="o">)</span>
+<span class="c1"># histogram of one given column</span>
+soc_viz_stats_hist<span class="o">(</span><span class="s1">&#39;age&#39;</span>,<span class="w"> </span>data<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="playerranking">
+<h3>playerranking<a class="headerlink" href="#playerranking" title="Permalink to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>from<span class="w"> </span>socceranalysis.rankingplayers<span class="w"> </span>import<span class="w"> </span>*
+<span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>pd.read_excel<span class="o">(</span><span class="s1">&#39;soccer_data.xlsx&#39;</span><span class="o">)</span>
+rankingplayers<span class="o">(</span>data,<span class="w"> </span><span class="s2">&quot;Goals_total&quot;</span>,<span class="w"> </span><span class="s2">&quot;Assists_Total&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading"></a></h2>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Core contributor</p></th>
+<th class="head"><p>Github.com username</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Flora Ouedraogo</p></td>
+<td><p>&#64;florawendy19</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gaoxiang Wang</p></td>
+<td><p>&#64;louiewang820</p></td>
+</tr>
+<tr class="row-even"><td><p>Manvir Kohli</p></td>
+<td><p>&#64;manvirsingh96</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vincent Ho</p></td>
+<td><p>&#64;vincentho32</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading"></a></h2>
+<p>Authors: Vincent Ho, Manvir Singh Kohli, Gaoxiang Wang, Flora Ouedraogo.</p>
+<p>Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.</p>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">socceranalysis</span></code> was created by Gaoxiang Wang, Manvir Kohli, Vincent Ho and Flora Ouedraogo. It is licensed under the terms of the MIT license.</p>
+</section>
+<section id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">socceranalysis</span></code> was created with <a class="reference external" href="https://cookiecutter.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code></a> and the <code class="docutils literal notranslate"><span class="pre">py-pkgs-cookiecutter</span></code> <a class="reference external" href="https://github.com/py-pkgs/py-pkgs-cookiecutter">template</a>.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="example.html" class="btn btn-neutral float-right" title="Example usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Group 15 .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

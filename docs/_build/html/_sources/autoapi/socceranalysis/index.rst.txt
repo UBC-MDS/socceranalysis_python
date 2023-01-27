@@ -1,0 +1,25 @@
+:py:mod:`socceranalysis`
+========================
+
+.. py:module:: socceranalysis
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   find_team_stat/index.rst
+   outlier_identification/index.rst
+   playerranking/index.rst
+   viz_stats/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+
+   
+
