@@ -33,6 +33,8 @@ $ pip install socceranalysis
 $ pip install -i https://test.pypi.org/simple/ socceranalysis
 ```
 
+**Installation may take some time, please be patient**
+
 ## Usage
 
 
