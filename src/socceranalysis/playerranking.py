@@ -1,7 +1,7 @@
 # Author: Flora Ouedraogo
 import pandas as pd 
 
-def rankingplayers(df, *col_name):
+def rankingplayers(df, col_name):
 
     """Returns a sorted table of players based on which variables the user decide to use to rank players.
     This function can help users find the most and less important variables which can be used to compare 
@@ -24,7 +24,7 @@ def rankingplayers(df, *col_name):
     >>> rankingplayers(soccer_df, "Goals_total", "Assists_Total")
     """
 
-    df = df.sort_values(by=[*col_name], ascending = False)
-    df = pd.DataFrame(df["Name"])
+    df = df.sort_values(by=[col_name], ascending = False)
+    df = pd.DataFrame(df[["Name", col_name]])
     
     return df.reset_index(drop = True)

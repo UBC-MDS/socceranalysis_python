@@ -34,15 +34,19 @@ small_data = pd.DataFrame({
     })
 
 test_df_1 = pd.DataFrame({
-        'Name' : ['Lous' , 'Flora' , 'Vincet', 'Leo', 'manvir']
+        'Name' : ['Lous' , 'Flora' , 'Vincet', 'Leo', 'manvir'],
+        'Goals_total' : np.array([1111,50, 24,4,4])
     })
 
 test_df_2 = pd.DataFrame({
-        'Name' : ['Flora' , 'manvir' , 'Leo', 'Vincet', 'Lous']
+        'Name' : ['Flora' , 'manvir' , 'Leo', 'Vincet', 'Lous'],
+        'age': np.array([34, 21, 20, 19, 19])
     })
 
 test_df_3 = pd.DataFrame({
-        'Name' : [ 'manvir', 'Flora' , 'Leo' , 'Lous', 'Vincet']
+        'Name' : [ 'manvir', 'Flora' , 'Leo' , 'Lous', 'Vincet'],
+        'Team' : ['G' , 'F', 'E', 'D', 'C']
+    
     })
 
 
@@ -96,6 +100,6 @@ def test_find_team_stat():
 def test_rankingplayers():
     "Test dataframe with the correct name order "
     assert rankingplayers(small_data, "Goals_total").equals(test_df_1), "The test dataframe and the function return dataframe are different"  
-    assert rankingplayers(small_data, "age").equals(test_df_2), "he test dataframe and the function return dataframe are different"
-    assert rankingplayers(small_data, "Team").equals(test_df_3), "he test dataframe and the function return dataframe are different"
+    assert rankingplayers(small_data, "age").equals(test_df_2), "The test dataframe and the function return dataframe are different"
+    assert rankingplayers(small_data, "Team").equals(test_df_3), "The test dataframe and the function return dataframe are different"
 
