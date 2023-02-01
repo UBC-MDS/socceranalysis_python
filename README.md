@@ -37,6 +37,7 @@ $ pip install -i https://test.pypi.org/simple/ socceranalysis
 
 ## Usage
 
+##### Use this link to download the dataset: https://github.com/UBC-MDS/socceranalysis_python/blob/main/soccer_data.xlsx
 
 ###  find_team_stat
 ```bash
