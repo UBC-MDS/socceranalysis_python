@@ -63,9 +63,9 @@ soc_viz_stats_hist('age', data)
 ```
 ### playerranking
 ```bash
-from socceranalysis.rankingplayers import *
+from socceranalysis.playerranking import *
 data = pd.read_excel('soccer_data.xlsx')
-rankingplayers(data, "Goals_total", "Assists_Total")
+rankingplayers(data, "Goals_total")
 ```
 
 ## Contributors
